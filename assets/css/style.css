@@ -1,6 +1,7 @@
 body {
     font-family: 'Cormorant Garamond', serif;
     background-color: #f9fbfd;
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -11,4 +12,21 @@ body {
 
 header {
     text-align: center;
+    padding-bottom: 30px;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-header {
+    display: block;
 }

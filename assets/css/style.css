@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Cormorant Garamond', serif;
     background-color: #f9fbfd;
@@ -27,6 +33,10 @@ header {
     margin: 0 auto;
 }
 
-.card-header {
+.card-header::after {
+    content: " ";
     display: block;
-}
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+}   

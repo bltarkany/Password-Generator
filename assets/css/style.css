@@ -39,4 +39,40 @@ header {
     width: 100%;
     background: #e7e9eb;
     height: 2px;
-}   
+} 
+
+.card-body {
+    min-height: 100px;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.card-footer::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+}
+
+.card-footer::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.btn {
+    border: none;
+    background-color: #cb152b;
+    border-radius: 25px;
+
+    color: hsl(0, 0%, 100%);
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 16px;
+    padding: 14px 34px; 
+    text-align: center;
+    cursor: pointer;
+}

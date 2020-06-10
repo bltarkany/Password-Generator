@@ -88,5 +88,6 @@ header {
     border: 2px dashed #e7e9eb;
     border-radius: 6px;
     text-align: center;
+    font-size: 20px;
     resize: none;
 }

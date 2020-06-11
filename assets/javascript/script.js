@@ -11,7 +11,6 @@ var upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 // function that prompts for password criteria from user
 // has conditional statements so the password passes standard
 // Object that stores collected information from prompts
-
 function grabPasswordCriteria() {
     // prompt password length in integer
     var length = parseInt(
@@ -26,7 +25,7 @@ function grabPasswordCriteria() {
     } else if (length > 129) {
         alert("Password cannot contain more than 128 characters.");
         return;
-    } else(isNaN(length) === true) {
+    } else if (isNaN(length) === true) {
         alert("Password length must be provided as a number.");
         return;
     }
@@ -65,4 +64,15 @@ function grabPasswordCriteria() {
         hasNumber: hasNumber
     };
     // start generation of password
+    return passwordCriteria;
+}
+
+// Get random functions
+function getRandom(arr) {
+    // pick a random index from the array length
+    var randomIndex = Math.floor(Math.random() * arr.length);
+    // grab the character from that index position
+    var randomChar = arr[randomIndex];
+    // return the character
+    return randomChar;
 }

@@ -15,10 +15,23 @@ var upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 function grabPasswordCriteria() {
     // prompt password length in integer
     var length = parseInt(
-        prompt('How many characters would you like in yu password?')
+        prompt('How many characters would you like in your password?')
     );
+    // verify that the number selected is at least 8 characters
+    // verify that the number selected is no more than 128 characters
+    if (length < 8){
+        alert("Password must contain at least 8 characters.");
+        return;
+    } else if (length > 129){
+        alert("Password cannot contain more than 128 characters.");
+        return;
+    } else (isNaN(length) === true){
+        alert("Password length must be provided as a number.")
+    }
     // Confirm yes/no for lowercase characters
-    
+    var hasLowercase = confirm(
+
+    )
     // Confirm yes/no for uppercase characters
 
     // Confirm yes/no for special characters

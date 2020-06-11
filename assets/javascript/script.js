@@ -63,7 +63,7 @@ function grabPasswordCriteria() {
         hasSpecial: hasSpecial,
         hasNumber: hasNumber
     };
-    // start generation of password
+    // return criteria
     return passwordCriteria;
 }
 
@@ -75,4 +75,26 @@ function getRandom(arr) {
     var randomChar = arr[randomIndex];
     // return the character
     return randomChar;
+}
+
+// Generate password function
+function generatePassword() {
+    // pull in gathered criteria for password
+    var criteria = grabPasswordCriteria();
+    // store resulted password
+    var result = [];
+    // store the possible types of character arrays to include
+    var possibleChars = [];
+    // store array that guaranteed to contain at least one of each type of needed character
+    var guaranteedChars = [];
+
+    // Conditional statement that adds the character arrays to be used into possibleChars
+    // And adds a guaranteed criteria character to the appropriate array
+
+    // for lowercase 
+    if (criteria.hasLowercase) {
+        possibleChars = possibleChars.concat(lowerChar);
+        guaranteedChars.push(getRandom(lowerChar));
+    }
+
 }

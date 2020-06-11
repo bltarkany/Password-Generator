@@ -120,4 +120,10 @@ function generatePassword() {
     }
 
     // add in guaranteed characters 
+    for (var i = 0; i < guaranteedChars.length; i){
+        result[i] = guaranteedChars[i];
+    }
+
+    // return the resulting password meeting criteria
+    return result;
 }

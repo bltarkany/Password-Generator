@@ -111,4 +111,13 @@ function generatePassword() {
         possibleChars = possibleChars.concat(numbers);
         guaranteedChars.push(getRandom(numbers));
     }
+
+    // create password the length of the criteria using specified options
+    for(var i = 0; i < criteria.length; i++){
+        var char = getRandom(possibleChars);
+        // result.push(getRandom(possibleChars));
+        result.push(char);
+    }
+
+    // add in guaranteed characters 
 }

@@ -20,13 +20,13 @@ function grabPasswordCriteria() {
     // verify that the number selected is at least 8 characters
     // verify that the number selected is no more than 128 characters
     // refactor into switch statement after full build
-    if (length < 8){
+    if (length < 8) {
         alert("Password must contain at least 8 characters.");
         return;
-    } else if (length > 129){
+    } else if (length > 129) {
         alert("Password cannot contain more than 128 characters.");
         return;
-    } else (isNaN(length) === true){
+    } else(isNaN(length) === true) {
         alert("Password length must be provided as a number.");
         return;
     }
@@ -39,11 +39,21 @@ function grabPasswordCriteria() {
         "Would you like your password to contain uppercase characters?"
     );
     // Confirm yes/no for special characters
-    var hasSpecialCharacteres = confirm(
+    var hasSpecial = confirm(
         "Would you like your password to contain special characters?"
     );
     // Confirm yes/no for numbers
-    var hasNumbers = confirm(
+    var hasNumber = confirm(
         "Would you like your password to contain numbers?"
     );
+    // verify that the password has at least one character type
+    if (
+        hasLowercase === false && 
+        hasUppercase === false && 
+        hasSpecial === false && 
+        hasNumber === false
+    ) {
+        alert("Password must contain at least one type of character.");
+        return;
+    };
 }

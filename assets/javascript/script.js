@@ -31,19 +31,19 @@ function grabPasswordCriteria() {
     }
     // Confirm yes/no for lowercase characters
     var hasLowercase = confirm(
-        "Would you like your password to contain lowercase characters?"
+        "Click OK if you would like your password to contain lowercase characters."
     );
     // Confirm yes/no for uppercase characters
     var hasUppercase = confirm(
-        "Would you like your password to contain uppercase characters?"
+        "Click OK if you would like your password to contain uppercase characters."
     );
     // Confirm yes/no for special characters
     var hasSpecial = confirm(
-        "Would you like your password to contain special characters?"
+        "Click OK if you would like your password to contain special characters."
     );
     // Confirm yes/no for numbers
     var hasNumber = confirm(
-        "Would you like your password to contain numbers?"
+        "Click OK if you would like your password to contain numbers."
     );
     // verify that the password has at least one character type
     if (
@@ -125,8 +125,7 @@ function generatePassword() {
     }
 
     // return the resulting password meeting criteria after changing results to a string
-    result.join('');
-    return result;
+    return result.join('');
 }
 
 // grab the generate button for event listener
@@ -136,7 +135,6 @@ var generateBtn = document.getElementById("generate");
 function writePassword() {
     // var that grab created password
     var password = generatePassword();
-    console.log(password);
     // grab DOM ID to write to
     var passWrite = document.getElementById("password");
     // give passWrite a value

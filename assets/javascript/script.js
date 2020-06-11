@@ -120,10 +120,28 @@ function generatePassword() {
     }
 
     // add in guaranteed characters 
-    for (var i = 0; i < guaranteedChars.length; i){
+    for (var i = 0; i < guaranteedChars.length; i++){
         result[i] = guaranteedChars[i];
     }
 
-    // return the resulting password meeting criteria
+    // return the resulting password meeting criteria after changing results to a string
+    result.join('');
     return result;
 }
+
+// grab the generate button for event listener
+var generateBtn = document.getElementById("generate");
+
+// write password to the DOM
+function writePassword() {
+    // var that grab created password
+    var password = generatePassword();
+    console.log(password);
+    // grab DOM ID to write to
+    var passWrite = document.getElementById("password");
+    // give passWrite a value
+    passWrite.value = password;
+} 
+
+// create an event listener to start the password creation
+generateBtn.addEventListener('click', writePassword);

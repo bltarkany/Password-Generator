@@ -56,4 +56,13 @@ function grabPasswordCriteria() {
         alert("Password must contain at least one type of character.");
         return;
     };
+    // create object that stores all information once password meets criteria
+    var passwordCriteria = {
+        length: length,
+        hasLowercase: hasLowercase,
+        hasUppercase: hasUppercase,
+        hasSpecial: hasSpecial,
+        hasNumber: hasNumber
+    };
+    // start generation of password
 }

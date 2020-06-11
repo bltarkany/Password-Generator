@@ -91,10 +91,24 @@ function generatePassword() {
     // Conditional statement that adds the character arrays to be used into possibleChars
     // And adds a guaranteed criteria character to the appropriate array
 
-    // for lowercase 
+    // for lowercase characters
     if (criteria.hasLowercase) {
         possibleChars = possibleChars.concat(lowerChar);
         guaranteedChars.push(getRandom(lowerChar));
     }
-
+    // for uppercase characters
+    if (criteria.hasUppercase) {
+        possibleChars = possibleChars.concat(upperChar);
+        guaranteedChars.push(getRandom(upperChar));
+    }
+    // for special characters
+    if (criteria.hasSpecial) {
+        possibleChars = possibleChars.concat(spChar);
+        guaranteedChars.push(getRandom(spChar));
+    }
+    // for numeric characters
+    if (criteria.hasNumber) {
+        possibleChars = possibleChars.concat(numbers);
+        guaranteedChars.push(getRandom(numbers));
+    }
 }

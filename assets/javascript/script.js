@@ -14,12 +14,14 @@ var upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 
 function grabPasswordCriteria() {
     // prompt password length in integer
+    var length = parseInt(
+        prompt('How many characters would you like in yu password?')
+    );
+    // Confirm yes/no for lowercase characters
+    
+    // Confirm yes/no for uppercase characters
 
-    // prompt for lowercase characters
+    // Confirm yes/no for special characters
 
-    // prompt for uppercase characters
-
-    // prompt for special characters
-
-    // prompt for numbers
+    // Confirm yes/no for numbers
 }
